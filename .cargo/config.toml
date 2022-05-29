@@ -1,0 +1,20 @@
+[alias]     # command aliases
+b = "build"
+bb = "build --release"
+c = "check"
+t = "test"
+r = "run"
+rr = "run --release"
+space_example = ["run", "--release", "--", "\"command list\""]
+
+[build]
+rustflags = ["-C", "target-feature=+crt-static"]
+target = "i686-pc-windows-msvc"
+#target = "i686-unknown-linux-gnu"
+#target = "i686-unknown-linux-musl"
+#target = "x86_64-unknown-linux-musl"
+
+[env]
+ENV_VAR_NAME = "value"
+ENV_VAR_NAME_2 = { value = "value", force = true }
+
